@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Book&Brain</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="format-detection" content="telephone=no">
+  <link type="text/css" rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="mainwrapper">
+    <div class="header">
+      <div class="white-line">
+        <div class="resize">
+          <div id="butthome" onclick="location.reload()">
+            <h1 id="home">Book&Brain</h1>
+          </div>
+          <div id="login" onclick="location.href = '';">
+            <p id="log">Реєстрація &#8226; Вхід</p>
+          </div>
+        </div>
+      </div>
+    </div> 
+    <div class="block_row">
+      <div class="clearfix block_column">
+        <div class="resize">
+          <div class="fields">
+            <h2>«Моя батьківщина там, де моя бібліотека»</h2>
+            <p>Мережа книгарень «Book&Brain» має особливу концепцію, чітко визначену позицію. Ми вирізняємось між більшістю книжкових мереж тим, що просуваємо український продукт. Ця позиція відповідає очікуванням суспільства, бо, як свідчать соціологічні дослідження, більшість українців надають перевагу україномовній книзі.</p>
+            <p>Мережа книгарень «Book&Brain» – це заохочення не лише для покупця, а й для українського видавця, оскільки його книжки посідають тут головні місця. Цим Книгарня «Є» принципово відрізняється від більшості інших книжкових мереж в Україні, які цілеспрямовано просувають російську книгу.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="review block_column">
+        <div class="resize">
+          <div class="description">
+            <div class="kinds">
+              <h3>Список асортименту книг</h3>
+              <ul>
+                <li>
+                  Предмети
+                  <ul>
+                    <li>Матиматика</li>
+                    <li>Фізика</li>
+                    <li>Історія</li>
+                    <li>Трудове мистецтво</li>
+                    <li>Українська мова</li>
+                    <li>Мистецтво</li>
+                  </ul>
+                </li>
+                <li>
+                  Рівень
+                  <ul>
+                    <li>Перший</li>
+                    <li>Другий</li>
+                    <li>Третій</li>
+                    <li>Четвертий</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="list">
+              <button type="button" class="btn" id="butt1" onclick="location.href = 'create.html';">Create New</button>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>
+                        Photo
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Subject)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Grade)
+                    </th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  @foreach (var item in Model) {
+                    <tr>
+                      <td>
+                        <img alt="" width="100" height="100" src="/Book/GetPhoto?id=@item.Id"/>
+                        @Html.HiddenFor(modelItem => item.Id)
+                      </td>
+                      <td>
+                          @Html.DisplayFor(modelItem => item.Name)
+                      </td>
+                      <td>
+                          @Html.DisplayFor(modelItem => item.Subject)
+                      </td>
+                      <td>
+                          @Html.DisplayFor(modelItem => item.Grade)
+                      </td>
+                      <td>
+                        <button type="button" class="btn" id="butt2" onclick="location.href = 'edit.html';">Edit</button>
+                        <button type="button" class="btn" id="butt3" onclick="location.href = 'delete.html';">Delete</button>
+                      </td>
+                    </tr>
+                  }
+                </tbody>
+              </table>
+            </div> 
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="secwhite-line">
+      <div class="resize">
+        <div class="footer">
+          <div class="paragr">
+            <p>Книга – це мрія, яку ви тримаєте у руках...
+          </p>
+          </div>
+          <div class="phones">
+            <p id="name">Інтернет магазин</p>
+            <p id="phone">+38(097) 545-23-56</p>
+            <p id="phone">+38(068) 211-47-12</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="../js/main.js"></script>
+</body>				
+					
+
+
+
