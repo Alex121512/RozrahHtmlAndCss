@@ -1,4 +1,5 @@
 body { background: url(../images/Kniga.jpg); margin: 0; color: #060606; font: normal 18px/28px Helvetica, Arial, sans-serif;}
+html, body {height: 100%; margin: 0;}
 .clear { clear: both;}
 .clearfix:after { content: ""; display: block; clear: both;}
 p { margin: 0; padding: 15px 15px;}
@@ -17,24 +18,26 @@ td {
 	text-align: center;
 }
 
-div#butthome {
-	float: left;
-	width: 225px;
+.mainwrapper {
+	min-height: 100%;
 }
 
-.mainwrapper {
-	min-width: 1080px;
-	opacity: 1;
+div#butthome {
+	float: left;
 }
 
 .resize {
 	margin: 0 auto;
 	padding: 0 20px;
-	width: 1200px;
+	max-width: 1200px;
 }
 
 .block_row {
-	padding-top: 70px;
+	padding: 20px;
+  padding-bottom: 90px;
+	padding-top: 90px;
+	padding-right: 15px;
+	margin-left: 15px;
 	min-height: 560px;
 	display: flex;
 	flex-direction: column;
@@ -45,7 +48,7 @@ div#butthome {
 }
 
 .fields {
-	height: 340px;
+	min-height: 340px;
 	margin-top: 30px;
 	background-color: #fff;
 	padding: 20px 25px 20px 25px;
@@ -53,26 +56,20 @@ div#butthome {
 	box-shadow: 5px 5px 12px #343434;
 }
 
-.footer#down {
-	width: 400px;
-}
-
 .paragr p {
 	padding-top: 25px;
 }
 
 .paragr {
-	width: 600px;
 	float: left;
 }
 
 .phones {
-	padding-right: 20px;
+	padding-right: 15px;
 	float: right;
 }
 
 div#login {
-	padding-right: 20px;
 	float: right;
 }
 
@@ -83,7 +80,6 @@ p#log:hover {
 
 p#name {
 	padding: 0;
-	text-align: center;
 }
 
 p#phone {
@@ -94,7 +90,7 @@ p#phone {
 	width: 100%;
 	color: #060606;
 	background: #fff;
-	height: 60px;
+	min-height: 60px;
 	box-shadow: 3px 3px 3px #575656;
 	position: fixed;
 	left: 50%;
@@ -102,21 +98,20 @@ p#phone {
 }
 
 .secwhite-line {
+  margin-top: -90px;
+	width: 100%;
 	color: #060606;
 	background: #fff;
-	height: 90px;
+	min-height: 90px;
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 }
 
-button#butt1 {
-	display: block;
-}
-
-button#butt3 {
-	float: right;
+button#butt2 {
+	margin-bottom: 25px;
 }
 
 .btn {
+	display: block;
 	font-size: 16px;
 	border-color: black;
 	border-radius: 4px;
@@ -124,6 +119,7 @@ button#butt3 {
 }
 
 .specialbtn {
+	display: block;
 	background-color: #4294ff;
 	font-size: 18px;
 	border-color: black;

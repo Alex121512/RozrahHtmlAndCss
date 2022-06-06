@@ -20,23 +20,17 @@ td {
 
 div#butthome {
 	float: left;
-	width: 225px;
-}
-
-.mainwrapper {
-	min-width: 1080px;
-	opacity: 1;
 }
 
 .resize {
 	margin: 0 auto;
 	padding: 0 20px;
-	width: 1200px;
+	max-width: 1200px;
 }
 
 .block_row {
 	padding-top: 40px;
-	min-height: 1000px;
+	max-height: 700px;
 	display: flex;
 	flex-direction: column;
 }
@@ -62,7 +56,6 @@ div#butthome {
 }
 
 .paragr {
-	width: 600px;
 	float: left;
 }
 
@@ -102,6 +95,7 @@ p#phone {
 }
 
 .secwhite-line {
+	width: 100%;
 	color: #060606;
 	background: #fff;
 	height: 90px;
